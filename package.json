@@ -1,0 +1,59 @@
+{
+  "name": "mediconsent",
+  "version": "0.1.0",
+  "private": false,
+  "homepage": "http://192.168.1.151/mediconsent",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bootstrap": "^4.3.1",
+    "font-awesome": "^4.7.0",
+    "google-maps-react": "^2.0.2",
+    "jquery": "^3.5.1",
+    "node-sass": "^4.14.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.4",
+    "react-bootstrap": "^1.4.0",
+    "react-dom": "^16.8.4",
+    "react-dropzone-uploader": "^2.11.0",
+    "react-full-screen": "^0.2.4",
+    "react-loadable": "^5.5.0",
+    "react-nvd3": "^0.5.7",
+    "react-perfect-scrollbar": "^1.4.4",
+    "react-redux": "^6.0.1",
+    "react-reveal": "^1.2.2",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^3.0.0",
+    "react-window-size": "^1.2.2",
+    "redux": "^4.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "pnotify": "^5.2.0",
+    "react-to-print": "^2.1.1"
+  },
+  "description": "Projet Mediconsent pour l'équipe 1 4MS2D",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AGoubs/mediconsent.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AGoubs/mediconsent/issues"
+  }
+}
