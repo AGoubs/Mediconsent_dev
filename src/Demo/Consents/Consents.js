@@ -1,10 +1,26 @@
 import React from 'react';
-import {Row, Col, Card, Table} from 'react-bootstrap';
+import { Row, Col, Card, Table } from 'react-bootstrap';
 
 import Aux from "../../hoc/_Aux";
+import axios from 'axios';
 
 class BootstrapTable extends React.Component {
+    state = {
+        consentements: []
+    }
+
+    componentDidMount() {
+        axios.get(`https://jsonplaceholder.typicode.com/posts`)
+            .then(res => {
+                const consentements = res.data;
+                this.setState({ consentements });
+            })
+    }
+
     render() {
+        const elements = this.state.consentements.map((consentements, index) =>
+            <tr key={index}><th scope="row">{consentements.userId} / 5</th><td>{consentements.body}</td></tr>
+        )
         return (
             <Aux>
                 <Row>
@@ -17,32 +33,15 @@ class BootstrapTable extends React.Component {
                             <Card.Body>
                                 <Table responsive>
                                     <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>First Name</th>
-                                        <th>Last Name</th>
-                                        <th>Username</th>
-                                    </tr>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Username</th>
+                                        </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>@fat</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Larry</td>
-                                        <td>the Bird</td>
-                                        <td>@twitter</td>
-                                    </tr>
+                                       {elements}
                                     </tbody>
                                 </Table>
                             </Card.Body>

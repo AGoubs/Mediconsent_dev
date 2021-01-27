@@ -20,7 +20,7 @@ import axios from 'axios';
 // defaultModules.set(PNotifyBootstrap4, {});
 
 // specify upload params and url for your files
-const getUploadParams = ({ meta }) => { return { url: 'https://httpbin.org/post' } }
+const getUploadParams = ({ meta }) => { return { url: 'https://localhost/mediconsent' } }
 
 
 // called every time a file's `status` changes
@@ -28,6 +28,7 @@ const handleChangeStatus = ({ meta, file }, status) => { }
 // test
 // receives array of files that are done uploading when submit button is clicked
 const handleSubmit = (files, allFiles) => {
+    console.log(files);
     // success({
     //     title: 'Succès !',s
     //     text: 'Importation réussie'

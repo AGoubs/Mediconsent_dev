@@ -15,21 +15,21 @@ export default {
                 }
             ]
         },
-        {
-            id: 'chart',
-            title: 'Stats',
-            type: 'group',
-            icon: 'icon-charts',
-            children: [
-                {
-                    id: 'charts',
-                    title: 'Statistiques',
-                    type: 'item',
-                    icon: 'feather icon-pie-chart',
-                    url: '/charts/nvd3'
-                }
-            ]
-        },
+        // {
+        //     id: 'chart',
+        //     title: 'Stats',
+        //     type: 'group',
+        //     icon: 'icon-charts',
+        //     children: [
+        //         {
+        //             id: 'charts',
+        //             title: 'Statistiques',
+        //             type: 'item',
+        //             icon: 'feather icon-pie-chart',
+        //             url: '/charts/nvd3'
+        //         }
+        //     ]
+        // },
         {
             id: 'appointment',
             title: 'Gestion',

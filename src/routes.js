@@ -15,7 +15,7 @@ const Consents = React.lazy(() => import('./Demo/Consents/Consents'));
 
 const Opinions = React.lazy(() => import('./Demo/Opinions/Opinions'));
 
-const Nvd3Chart = React.lazy(() => import('./Demo/Charts/Nvd3Chart/index'));
+// const Nvd3Chart = React.lazy(() => import('./Demo/Charts/Nvd3Chart/index'));
 
 
 
@@ -25,7 +25,7 @@ const routes = [
     { path: '/questions', exact: true, name: 'Questions', component: Questions },
     { path: '/consents', exact: true, name: 'Consents', component: Consents },
     { path: '/opinions', exact: true, name: 'Opinions', component: Opinions },
-    { path: '/charts/nvd3', exact: true, name: 'Nvd3 Chart', component: Nvd3Chart },
+    // { path: '/charts', exact: true, name: 'Nvd3 Chart', component: Nvd3Chart },
 ];
 
 export default routes;
