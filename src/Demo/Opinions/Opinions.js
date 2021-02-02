@@ -12,7 +12,7 @@ class BootstrapTable extends React.Component {
     }
 
     componentDidMount() {
-        axios.get(`http://194.183.220.41:9095/Mediconsent/rest/avis`)
+        axios.get(`http://194.183.220.233:9095/Mediconsent/rest/avis`)
             .then(res => {
                 const avis = res.data;
                 this.setState({ avis });

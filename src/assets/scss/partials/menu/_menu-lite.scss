@@ -1505,25 +1505,6 @@
                     }
                 }
 
-                .main-search {
-                    // .search-close > .input-group-text {
-                    //     color: $primary-color;
-                    // }
-                    //
-                    // &.open {
-                    //     .input-group {
-                    //         .search-btn {
-                    //             background: $primary-color;
-                    //             border-color: $primary-color;
-                    //
-                    //             .input-group-text {
-                    //                 color: #fff;
-                    //             }
-                    //         }
-                    //     }
-                    // }
-                }
-
                 .dropdown {
                     .notification {
                         .noti-body {
@@ -1841,5 +1822,6 @@
 }
 /* ==========================    Rsponsive Menu  end   ====================== */
 .collapse.navbar-collapse {
-    background-color: #04a9f5;
+    // background: $theme-color;
+    background: none;
 }

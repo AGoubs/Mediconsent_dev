@@ -22,10 +22,10 @@ class Form extends React.Component {
         return (
             <form onSubmit={this.handleSubmit}>
                 <Card>
-                    <Card.Header>
+                    <Card.Body>
                         <Card.Title as="h5">Questionnaire {this.props.type}</Card.Title>
                         <Button variant="primary" type="submit" className="float-right">Sélectionner</Button>
-                    </Card.Header>
+                    </Card.Body>
                 </Card>
             </form>
         );
