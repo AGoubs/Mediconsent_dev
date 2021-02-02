@@ -44,11 +44,11 @@ export default {
                     url: '/appointments'
                 },
                 {
-                    id: 'questions',
+                    id: 'forms',
                     title: 'Questionnaire',
                     type: 'item',
                     icon: 'feather icon-clipboard',
-                    url: '/questions'
+                    url: '/forms'
                 }
             ]
         },
