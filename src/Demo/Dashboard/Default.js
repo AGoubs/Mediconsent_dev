@@ -61,8 +61,8 @@ class Dashboard extends React.Component {
 
 
         const etablissement = this.state.hospital.slice(0, 1).map((value, index) =>
-            // <h4 key={index}>{value.title}</h4>
-            <h4>Clinique du Parc</h4>
+            <h4 key={index}>{value.title}</h4>
+            // <h4>Clinique du Parc</h4>
         )
 
 
@@ -127,7 +127,7 @@ class Dashboard extends React.Component {
                             </Card.Body>
                         </Card>
                     </Col>
-                    {/* <Col md={6} xl={4}>
+                    <Col md={6} xl={4}>
                         <Card>
                             <Card.Body>
                                 <h6 className='mb-4'>Nombre d'examen</h6>
@@ -164,8 +164,8 @@ class Dashboard extends React.Component {
                                 </div>
                             </Card.Body>
                         </Card>
-                    </Col> */}
-                    <Col md={12} xl={12}>
+                    </Col>
+                    <Col md={12} xl={8}>
                         <Card className='Recent-Users'>
                             <Card.Header>
                                 <Card.Title as='h5'>Examens</Card.Title>
@@ -180,7 +180,7 @@ class Dashboard extends React.Component {
                         </Card>
                     </Col>
 
-                    {/* <Col md={12} xl={4}>
+                    <Col md={12} xl={4}>
                         <Card>
                             <Card.Header>
                                 <Card.Title as='h5'>Avis</Card.Title>
@@ -236,7 +236,7 @@ class Dashboard extends React.Component {
                                 </div>
                             </Card.Body>
                         </Card>
-                    </Col> */}
+                    </Col>
 
                 </Row>
             </Aux>
