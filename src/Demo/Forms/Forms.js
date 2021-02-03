@@ -11,7 +11,16 @@ class Forms extends React.Component {
         forms: []
     }
 
+    constructor(props) {
+        super(props);
+        
+      }
+
+
     componentDidMount() {
+        console.log(this.props);
+
+
         axios.get(`https://jsonplaceholder.typicode.com/users`)
             .then(res => {
                 const forms = res.data;
@@ -20,8 +29,10 @@ class Forms extends React.Component {
     }
 
     render() {
+
+
         const elements = this.state.forms.map((form, index) =>
-        <Form key={index} type={form.name} />
+            <Form key={index} type={form.name} />
 
         )
         return (
