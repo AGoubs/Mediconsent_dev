@@ -7,34 +7,7 @@ import axios from 'axios';
 
 
 class Forms extends React.Component {
-    state = {
-        forms: []
-    }
-
-    constructor(props) {
-        super(props);
-        
-      }
-
-
-    componentDidMount() {
-        console.log(this.props);
-
-
-        axios.get(`https://jsonplaceholder.typicode.com/users`)
-            .then(res => {
-                const forms = res.data;
-                this.setState({ forms });
-            })
-    }
-
     render() {
-
-
-        const elements = this.state.forms.map((form, index) =>
-            <Form key={index} type={form.name} />
-
-        )
         return (
             <Aux>
                 <Row>
@@ -44,7 +17,8 @@ class Forms extends React.Component {
                                 <Card.Title as="h5">Choisir le questionnaire</Card.Title>
                             </Card.Header>
                         </Card>
-                        {elements}
+                        <Form type="Scanner" />
+                        <Form type="Radio" />
                     </Col >
                 </Row >
             </Aux >

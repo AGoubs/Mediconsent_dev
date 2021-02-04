@@ -1,8 +1,34 @@
 import React from 'react';
 import { Row, Col, Card, Form, Button } from 'react-bootstrap';
 import Aux from "../../hoc/_Aux";
+import axios from 'axios';
 
 class Question extends React.Component {
+
+    state = {
+        libelle_question: '',
+        checkbox: false,
+        message_validation: '',
+        message_erreur: ''
+    };
+
+    libelle = React.createRef();
+
+    handleSubmit = event => {
+        event.preventDefault();
+        axios.put(`http://194.183.220.233:9095/Mediconsent/rest/question/save`, 
+        {
+            id_question: this.props.id,
+            libelle_question: this.libelle.current.value
+        })
+            .then(res => {
+                this.setState({message_validation: "Valeur enregistrée avec succès"})
+            })
+            .catch(error => {
+                this.setState({message_erreur: "Echec de l'enregistrement"})
+            });
+    }
+
     render() {
         return (
             <Aux>
@@ -15,21 +41,19 @@ class Question extends React.Component {
                             <Card.Body>
                                 <Row>
                                     <Col md={12}>
-                                        <Form>
+                                        <form onSubmit={this.handleSubmit}>
                                             <Form.Group controlId={this.props.id}>
                                                 <Form.Label>Question</Form.Label>
-                                                <Form.Control as="textarea" rows="2" required defaultValue={this.props.title} />
+                                                <Form.Control as="textarea" rows="2" required defaultValue={this.props.title}
+                                                    ref={this.libelle}
+                                                />
                                             </Form.Group>
-                                            {['radio'].map((type) => (
-                                                <div key={`inline-${type}`} className="mb-3">
-                                                    <Form.Check inline label="Oui" type={type} id={`inline-${this.props.id}-1`} />
-                                                    <Form.Check inline label="Non" type={type} id={`inline-${this.props.id}-2`} />
-                                                </div>
-                                            ))}
                                             <Button variant="primary" type="submit">
                                                 Enregistrer
                                             </Button>
-                                        </Form>
+                                        </form>
+                                        <div className="text-success">{this.state.message_validation}</div>
+                                        <div className="text-danger">{this.state.message_erreur}</div>
                                     </Col>
                                 </Row>
                             </Card.Body>

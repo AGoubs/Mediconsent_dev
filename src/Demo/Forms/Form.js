@@ -1,20 +1,23 @@
 import React from 'react';
+import { withRouter } from "react-router-dom";
 import { Card, Button } from 'react-bootstrap';
 import axios from 'axios';
 
 class Form extends React.Component {
 
+    state = {
+        type_form: this.props.type == "Scanner" ? 1 : 2
+    }
+
     handleSubmit = event => {
         event.preventDefault();
 
-        const user = {
-            name: this.props.type
-        };
-
-        axios.post(`https://jsonplaceholder.typicode.com/users`, { user })
+        axios.get(`http://194.183.220.233:9095/Mediconsent/rest/questions/formulaire/${this.state.type_form}`)
             .then(res => {
-                console.log(res);
-                console.log(res.data);
+                this.props.history.push({
+                    pathname: '/questions',
+                    state: { detail: res.data }
+                  })
             })
     }
 
@@ -32,4 +35,4 @@ class Form extends React.Component {
     }
 }
 
-export default Form;
+export default withRouter(Form);

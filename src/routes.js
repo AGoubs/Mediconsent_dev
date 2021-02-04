@@ -24,6 +24,7 @@ const routes = [
     { path: '/', exact: true, name: 'Default', component: DashboardDefault },
     { path: '/appointments', exact: true, name: 'Appointments', component: Appointment },
     { path: '/forms', exact: true, name: 'forms', component: Forms },
+    { path: '/questions', exact: true, name: 'questions', component: Questions },
     { path: '/consents', exact: true, name: 'Consents', component: Consents },
     { path: '/opinions', exact: true, name: 'Opinions', component: Opinions },
     // { path: '/charts', exact: true, name: 'Nvd3 Chart', component: Nvd3Chart },

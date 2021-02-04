@@ -9,28 +9,20 @@ import axios from "axios";
 class SignUp1 extends React.Component {
 
 
-    constructor(props) {
-        super(props)
+    state = {
+        secu: '',
+        password: ''
+    };
 
-        this.state = {
-            secu: '',
-            password: ''
-        };
-        this.handleChangeSecu = this.handleChangeSecu.bind(this);
-        this.handleChangePassword = this.handleChangePassword.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
-
-
-    handleChangeSecu(e) {
+    handleChangeSecu = e => {
         this.setState({ secu: e.target.value });
     }
 
-    handleChangePassword(e) {
+    handleChangePassword = e => {
         this.setState({ password: e.target.value });
     }
 
-    handleSubmit(event) {
+    handleSubmit = event => {
         event.preventDefault();
 
         axios
